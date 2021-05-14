@@ -1,0 +1,23 @@
+
+<app-header titulo="Vacunar"></app-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="vacunaForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Folio <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required formControlName="PersonaId" type="text"></ion-input>
+      
+    </ion-item>
+     <ion-item>
+       <ion-label>Vacuna:</ion-label>
+       <ion-select required value="0"  placeholder="Vacuna">
+         <ion-select-option value="2">Astra Zeneca</ion-select-option>
+         <ion-select-option value="3">Pfizer</ion-select-option>
+         <ion-select-option value="1">Sputnik</ion-select-option>
+       </ion-select>
+     </ion-item>
+    <ion-button block color="danger" type="submit" [disabled]="vacunaForm.invalid">
+      Guardar
+    </ion-button>
+  </form>
+</ion-content>

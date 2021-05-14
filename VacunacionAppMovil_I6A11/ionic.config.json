@@ -1,0 +1,7 @@
+{
+  "name": "VacunacionAppMovil_I6A11",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

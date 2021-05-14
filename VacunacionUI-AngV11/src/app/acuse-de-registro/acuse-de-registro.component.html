@@ -1,0 +1,54 @@
+<div class="content">
+    <div class="card mt-5 text-center" id="pdfArea">
+        <h1>Registro de vacunación COVID-19</h1>
+        <div class="card-body">
+            <h2 class="card-title">Folio: {{Folio}}</h2>
+            <h5 class="card-title">{{Nombre}}</h5>
+            <h5 class="card-title">{{curp}}</h5>                          
+            <!-- <span class="mb-2">Dósis recibidas:  0/2</span> -->            
+            <ngx-qrcode
+                id="qrcode"
+                [elementType]="elementType"
+                [value] = "value"
+                cssClass = "aclass"
+                [errorCorrectionLevel] = "errorCorrectionLevel">
+            </ngx-qrcode>
+            <br>
+            <table class="table table-striped ">
+                <thead>
+                    <tr>
+                        <th colspan="2">Datos Registrados</th>                                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Folio:</th>                           
+                        <td>{{Folio}}</td>                                       
+                    </tr>
+                    <tr>
+                        <th scope="row">Fecha de registro:</th>
+                        <td>{{now[0]}}</td>  
+                    </tr>
+                    <tr>
+                        <th scope="row">Hora de registro:</th>
+                        <td>{{now[1]}}</td>  
+                    </tr>
+                    <tr>
+                        <th scope="row">CURP:</th>
+                        <td>{{curp}}</td>  
+                    </tr>
+                </tbody>
+            </table>                                               
+        </div>
+    </div>
+    <br>
+    <div class="row"> 
+        <div class="col-sm-1"></div>
+        <div class="col"><button type="button" id="PDF" name="PDF" class="btn btn-success" (click)="descargaPDF()">Descargar PDF.</button> </div>
+        <div class="col-sm-1"></div>
+        <div class="col"><button type="button" routerLink="/home" id="Home"  class="btn btn-success">Home</button></div>
+        <div class="col"><button type="button" routerLink="/carnet" id="Home"  class="btn btn-success">Vacunar</button></div>
+        <!-- <div class="col"> <button type="button" id="Correo" name="Correo" class="btn btn-success" (click)="enviaCorreo()" >Enviar por correo.</button> </div>         -->
+    </div>    
+    <br>   
+</div>

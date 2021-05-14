@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Publish\Vacunacion\API-net5_0</_PublishTargetUrl>
+    <History>True|2021-05-07T14:57:49.0753599Z;True|2021-05-06T16:24:56.4611261-05:00;True|2021-04-30T17:52:48.3738850-05:00;True|2021-04-21T16:42:05.1715691-05:00;True|2021-04-21T16:40:44.6468310-05:00;True|2021-04-21T16:37:02.0412437-05:00;True|2021-04-21T16:15:28.7019698-05:00;True|2021-04-21T16:04:45.8667176-05:00;True|2021-04-19T10:57:12.6737383-05:00;True|2021-04-18T22:52:36.1076960-05:00;True|2021-04-17T13:21:01.6190067-05:00;True|2021-04-17T13:20:36.5628618-05:00;True|2021-04-17T11:24:16.1907360-05:00;True|2021-03-22T12:08:01.5738909-06:00;</History>
+  </PropertyGroup>
+</Project>

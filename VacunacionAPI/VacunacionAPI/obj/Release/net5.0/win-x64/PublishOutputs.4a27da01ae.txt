@@ -1,0 +1,17 @@
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\VacunacionAPI.exe
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\appsettings.Development.json
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\appsettings.json
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\VacunacionAPI.dll
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\VacunacionAPI.deps.json
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\VacunacionAPI.runtimeconfig.json
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\VacunacionAPI.pdb
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\Microsoft.AspNetCore.JsonPatch.dll
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\Newtonsoft.Json.dll
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\Newtonsoft.Json.Bson.dll
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\System.Data.SqlClient.dll
+C:\Backups_a_restaurar\Vacunacion\VacunacionAPI\VacunacionAPI\obj\Release\net5.0\win-x64\PubTmp\Out\sni.dll

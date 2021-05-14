@@ -1,0 +1,177 @@
+
+
+<!-- 
+<ion-card-header *ngIf="+type === 1">
+  <ion-card-subtitle class="ion-padding-vertical">Fomulario de registro Tipo f{{type}}</ion-card-subtitle>
+</ion-card-header> 
+
+<ion-item>
+  <ion-input type="password" placeholder="Password"></ion-input>
+  <ion-button color="danger" clear item-right>Forgot</ion-button>
+</ion-item>
+
+-->
+
+<ion-grid fixed>
+  <form [formGroup]="registroForm" (ngSubmit)="onSubmit()" class="max-form-width">  
+    <ion-list lines="full" class="ion-no-margin">
+      <!-- INFORMACION PERSONAL -->
+      <ion-row>        
+        <ion-list-header lines="full">
+          <ion-label class="font-format">
+            Información Personal.
+          </ion-label>
+        </ion-list-header> 
+        <ion-col *ngIf="+type === 1" size="12" size-lg="3" size-md="4" size-sm="6" >
+          <ion-item >            
+            <ion-label position="floating" color="warning" class="italic font-format-ligth">CURP: <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input #Curp required formControlName="Curp" type="text" ></ion-input>                       
+          </ion-item>   
+          <ion-item>
+            <ion-button clear slot="end" color="danger" (click)="setPersonalInfo()">Buscar</ion-button>
+          </ion-item>                              
+        </ion-col>
+        <ion-col *ngIf="+type === 3" size="12" size-lg="3" size-md="4" size-sm="6">
+          <ion-item >
+            <ion-label position="floating" color="warning" class="italic font-format-ligth">No. Pasaporte: <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required formControlName="NoPasaporte" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col *ngIf="+type === 2 || +type === 3 || +type === 4" size="12" size-lg="3" size-md="4" size-sm="6">
+          <ion-item >
+            <ion-label position="floating"  color="warning" class="italic font-format-ligth">Nombre(s) <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required formControlName="Nombre" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col *ngIf="+type === 2 || +type === 3 || +type === 4" size="12" size-lg="3" size-md="4" size-sm="6">
+          <ion-item >
+            <ion-label position="floating"  color="warning" class="italic font-format-ligth">Apellido Paterno: <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input  formControlName="ApellidoPaterno" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col *ngIf="+type === 2 || +type === 3 || +type === 4" size="12" size-lg="3" size-md="4" size-sm="6">
+          <ion-item >
+            <ion-label position="floating"  color="warning" class="italic font-format-ligth">Apellido Materno: <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input  formControlName="ApellidoMaterno" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col *ngIf="+type === 2 || +type === 3 || +type === 4" size="12" size-lg="3" size-md="4" size-sm="6">
+          <ion-item >
+            <ion-label position="floating"  color="warning" class="italic font-format-ligth">Fecha De Nacimiento: <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input formControlName="FechaDeNacimiento" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col *ngIf="+type === 2 || +type === 3 || +type === 4" size="12" size-lg="3" size-md="4" size-sm="6">
+          <ion-item >
+            <ion-label position="floating"  color="warning" class="italic font-format-ligth">Sexo: <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input  formControlName="Sexo" type="text"></ion-input>
+          </ion-item>
+        </ion-col>      
+      </ion-row>
+      <!-- FIN INFORMACION PERSONAL  -->
+      
+      <!-- DOMICILIO -->
+      <ion-row *ngIf=" +type === 1 ||  +type === 2">
+        <ion-list-header lines="full">
+          <ion-label class="font-format">
+            Domicilio.
+          </ion-label>      
+        </ion-list-header> 
+  
+        <!-- *ngIf=" +type === 3 || +type === 4" -->
+        <ion-col *ngIf="+type === 3 || +type === 4" size="12" size-lg="3" size-md="4" size-sm="6">          
+          <ion-item >
+            <ion-label position="floating" color="warning" class="italic font-format-ligth">Nacionalidad:<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input  formControlName="Nacionalidad" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+        <!-- *ngIf="+type === 1 || +type === 2 || +type === 3 || +type === 4" -->
+        <ion-col *ngIf="+type === 1 ||  +type === 2" size="12" size-lg="3" size-md="4" size-sm="6" >
+          <ion-item >
+            <ion-label position="floating"  color="warning" class="italic font-format-ligth">Código Postal: <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input  formControlName="CodigoPostal" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-button clear slot="end" color="danger" (click)="setDomicilioInfo()">Buscar</ion-button>
+          </ion-item>
+        </ion-col>
+        <!-- *ngIf="+type === 2 || +type === 3 || +type === 4" -->
+        <ion-col *ngIf="+type === 0 " size="12" size-lg="3" size-md="4" size-sm="6">
+          <ion-item >
+            <ion-label position="floating"  color="warning" class="italic font-format-ligth">Estado:<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input  formControlName="Estado" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+        <!-- *ngIf="+type === 2 || +type === 3 || +type === 4" -->
+        <ion-col *ngIf="+type === 0" size="12" size-lg="3" size-md="4" size-sm="6">
+          <ion-item >
+            <ion-label position="floating"  color="warning" class="italic font-format-ligth">Localidad: <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input  formControlName="Localidad" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+        <!-- *ngIf="+type === 1 || +type === 2 || +type === 3 || +type === 4" -->
+        <ion-col *ngIf="+type === 1 ||  +type === 2" size="12" size-lg="3" size-md="4" size-sm="6">
+          <ion-item > 
+            <ion-label position="floating"  color="warning" class="italic font-format-ligth">Colonia: <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input  formControlName="Colonia" type="text"> </ion-input>
+          </ion-item>
+        </ion-col>
+        <!-- *ngIf="+type === 1 || +type === 2 || +type === 3 || +type === 4" -->
+        <ion-col *ngIf="+type === 1 ||  +type === 2" size="12" size-lg="3" size-md="4" size-sm="6">
+          <ion-item > 
+            <ion-label position="floating"  color="warning" class="italic font-format-ligth">Calle: <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input  formControlName="Calle" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+        <!-- *ngIf="+type === 1 || +type === 2 || +type === 3 || +type === 4" -->
+        <ion-col *ngIf="+type === 1 ||  +type === 2" size="12" size-lg="3" size-md="4" size-sm="6">
+          <ion-item >
+            <ion-label position="floating"  color="warning" class="italic font-format-ligth">Número: <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input  formControlName="Numero" type="text" oninput="this.value=this.value.replace(/[^\d]+/,'')">
+              
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-lg="3" size-md="4" size-sm="6"></ion-col>
+        <ion-col size="12" size-lg="3" size-md="4" size-sm="6"></ion-col>
+        <ion-col size="12" size-lg="3" size-md="4" size-sm="6"></ion-col>
+      </ion-row>
+      <!-- FIN DOMICILIO -->
+  
+      <!-- CONTACTO -->
+      <ion-row>
+        <ion-list-header lines="full">
+          <ion-label class="font-format">
+            Contacto.
+          </ion-label>         
+        </ion-list-header> 
+          
+        <ion-col *ngIf="+type === 1 || +type === 2 || +type === 3 || +type === 4" size="12" size-lg="3" size-md="4" size-sm="6">
+          <ion-item >
+            <ion-label  position="floating"  color="warning" class="italic font-format-ligth">Correo: <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input  type="email"
+                        formControlName="Correo"                   
+                        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                        required>
+                      
+                      </ion-input>
+          </ion-item> 
+        </ion-col>
+        <ion-col *ngIf="+type === 1 || +type === 2 || +type === 3 || +type === 4" size="12" size-lg="3" size-md="4" size-sm="6">
+          <ion-item >
+            <ion-label  position="floating"  color="warning" class="italic font-format-ligth">Número De Teléfono: <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input  type="tel"
+                        formControlName="Telefono"                   
+                        required>
+                      
+                      </ion-input>
+          </ion-item>
+        </ion-col>    
+      </ion-row>
+      <!-- FIN CONTACTO -->                                                                                                    
+    </ion-list>
+    <ion-button block color="primary" type="submit" [disabled]="registroForm.invalid">
+      Guardar
+    </ion-button>
+  </form>  
+</ion-grid>

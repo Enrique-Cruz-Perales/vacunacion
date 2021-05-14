@@ -1,0 +1,76 @@
+
+
+<div class="container">
+    <br/>
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+        <div class="form-group">
+            <label for="CURP">CURP</label>
+            <div class="input-group mb-3">
+                <input type="text"  class="form-control" #Curp id="CURP" placeholder="Ingrese CURP" formControlName="CURP"> 
+                <div class="input-group-append">   
+                    <button class="btn btn-outline-secondary" type="button" (click)="buscarPersona(Curp.value)">Buscar</button>
+                </div>                            
+            </div>                    
+        </div>
+        <div class="form-group">
+            <label for="Nombre">Nombre(s)</label>
+            <input type="text" class="form-control" id="Nombre" placeholder="Ingrese Nombre" formControlName="Nombre" [value]="this.Nombre" readonly>           
+        </div>
+        <div class="form-group">
+            <label for="ApellidoPaterno">Apellido Paterno</label>
+            <input type="Text" class="form-control" id="ApellidoPaterno" placeholder="Ingrese Apellido Paterno" formControlName="ApellidoPaterno" [value]="this.ApellidoPaterno" readonly>
+        </div>
+        <div class="form-group">
+            <label for="ApellidoMaterno">Apellido Materno</label>
+            <input type="Text" class="form-control" id="ApellidoMaterno" placeholder="Ingrese Apellido Materno" formControlName="ApellidoMaterno" [value]="this.ApellidoMaterno" readonly>            
+        </div>
+        <div class="form-group">
+            <label for="CorreoElectronico">Correo Electronico</label>
+            <input type="email" class="form-control" id="CorreoElectronico" placeholder="Ingrese Correo Electronico" formControlName="CorreoElectronico">            
+        </div>
+        <div class="form-group">
+            <label for="Edad">Edad</label>
+            <input type="Text" class="form-control" id="Edad" placeholder="Ingrese Edad" formControlName="Edad" [value]="this.Edad" readonly>
+        </div>
+        <div class="form-group">
+            <label for="CodigoPostal">Codigo Postal</label>
+            <div class="input-group mb-3">                
+                <input type="text" class="form-control" #CodigoPostal id="CodigoPostal" placeholder="Ingrese CodigoPostal" formControlName="CodigoPostal"> 
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" (click)="buscarCodigoPostal(CodigoPostal.value)">Buscar</button>
+                </div>
+            </div>
+                       
+        </div>
+        <div class="form-group">
+            <label for="Calle">Calle</label>
+            <input type="Text" class="form-control" id="Calle" placeholder="Ingrese Calle" formControlName="Calle">            
+        </div>
+         <div class="form-group">
+            <label for="Colonia">Colonia</label>
+            <input type="text" class="form-control" id="Colonia" placeholder="Ingrese Colonia" formControlName="Colonia" >            
+        </div>
+        
+        <div class="form-group">
+            <label for="Municipio">Municipio</label>
+            <input type="Text" class="form-control" id="Municipio" placeholder="Ingrese Municipio" formControlName="Municipio" [value]="this.Municipio" readonly>
+        </div>
+        <div class="form-group">
+            <label for="Estado">Estado</label>
+            <input type="Text" class="form-control" id="Estado" placeholder="Ingrese Estado" formControlName="Estado" [value]="this.Estado" readonly>            
+        </div>
+        
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>                
+    </form>
+    <br/>
+    <button type="button" routerLink="/home" class="btn btn-info">Regresar</button>
+    <button type="button" routerLink="/carnet" class="btn btn-info">Vacunar</button>
+    <button type="button" (click)="getFolio()" class="btn btn-info">Folio</button>
+</div>
+
+
+
+    
+ 

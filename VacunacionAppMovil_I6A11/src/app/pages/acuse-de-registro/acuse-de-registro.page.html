@@ -1,0 +1,139 @@
+<app-header titulo="Acuse"></app-header>
+
+<ion-content class="ion-padding">
+  <!-- <ion-card> -->
+    <div id="pdfArea">
+      <!-- <ion-card-header class="ion-text-center">
+         <ion-card-subtitle >{{PersonaId}}</ion-card-subtitle> 
+        
+      </ion-card-header> -->
+      <h3 class="ion-text-center"Ks>Acuse de registro para vacunación.</h3>
+      <ion-text color="dark" >
+        <p>Le informamos que el gobierno de México ha recibido los siguientes datos para su registro de vacunación, 
+          a la brevedad nos pondremos en contacto con usted</p>
+      </ion-text>    
+      <div align='center'>
+        <ngx-qrcode
+                  id="qrcode"
+                  [elementType]="elementType"
+                  [value] = "value"
+                  cssClass = "aclass"
+                  [errorCorrectionLevel] = "errorCorrectionLevel">
+        </ngx-qrcode>
+      </div>
+      <!-- <h6 class="ion-text-center">{{pData[0]}}</h6> -->
+      <p class="ion-text-center font-format">{{pData[1]}}</p>
+      <!-- <P class="ion-text-center">Fecha de registro: {{now}}</P>  -->
+    
+
+    <!-- <ion-card-content>   -->
+
+      <ion-grid class="ion-text-center">
+        <ion-row class="header-row">
+          <ion-col class="font-format">
+            <ion-text>Datos registrados</ion-text>
+          </ion-col>
+        </ion-row>
+        
+        <!-- <ion-row class="header-row">
+          <ion-col>
+            <ion-text>Data</ion-text>
+          </ion-col>
+    
+          <ion-col>
+            <ion-text>Cliente</ion-text>
+          </ion-col>
+    
+          <ion-col>
+            <ion-text>Pagamento</ion-text>
+          </ion-col>
+        </ion-row> -->
+    
+    
+        <ion-row>
+          <ion-col>
+            <ion-text class="font-format">
+                Folio:
+            </ion-text>
+          </ion-col>
+    
+          <ion-col>
+            <ion-text class="font-format-ligth">
+              {{pData[0]}}
+            </ion-text>
+          </ion-col>                  
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-text class="font-format">
+                Fecha de registro:
+            </ion-text>
+          </ion-col>
+    
+          <ion-col>
+            <ion-text class="font-format-ligth">  
+              {{now}}
+            </ion-text>
+          </ion-col>                  
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-text class="font-format">
+                Unidad de vacunacón.
+            </ion-text>
+          </ion-col>
+    
+          <ion-col>
+            <ion-text class="font-format-ligth">
+              Estadio Nemesio Diez.
+            </ion-text>
+          </ion-col>                  
+        </ion-row>
+    
+      </ion-grid>
+    </div> 
+      <ion-button (click)="descargaPDF()" color="primary" expand="block"  shape="round">
+        Descargar PDF.
+      </ion-button>   
+     
+    <!-- </ion-card-content> -->
+  <!-- </ion-card>        -->
+</ion-content>
+
+
+
+
+<!-- <ion-list>
+  <ion-list-header>
+    <h2>Vacunas Covid-19</h2>          
+  </ion-list-header>
+
+  <ion-item *ngFor="let item of carnetVacunacionInfoLst">          
+    <ion-label>
+      <h2>{{item.Marca}}</h2>
+      <h3>{{item.FechaVacunacion}}</h3>
+      <p>Dosis aplicada: {{item.DosisAplicada}}</p>
+    </ion-label>
+  </ion-item>        
+</ion-list>
+
+<ion-list>
+  <ion-list-header>
+    <h2>Pruebas rápidas</h2>          
+  </ion-list-header>
+
+  <ion-item>          
+    <ion-label>
+      <h3>Laboratorio CHOPO</h3>
+      <h3>Fecha de aplicacion: 27/02/2021</h3>
+      <p>Vigencia: Vencida.</p>
+    </ion-label>
+  </ion-item>
+  <ion-item>          
+    <ion-label>
+      <h3>Laboratorio CHOPO</h3>
+      <h3>Fecha de aplicacion: 30/04/2021</h3>
+      <p>Vigencia: 15/05/2021</p>
+    </ion-label>
+  </ion-item>              
+</ion-list> -->

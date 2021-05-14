@@ -1,0 +1,48 @@
+<div class="content">
+    <br>
+    <div class="text-center" id="pdfArea">
+        <h5>Registro de Vacunación COVID-19</h5>
+        <div class="card-body">
+            <h5 class="card-title">{{Nombre}}</h5>
+            <h5 class="card-title">{{curp}}</h5>
+            <p class="card-text">Vacuna: <span>{{Vacuna}}</span></p>            
+            
+            <span  class="mb-2">Dósis recibidas:  {{DosisRecibidas}}</span>
+            <div></div>
+            <ngx-qrcode
+                id="qrcode"
+                [elementType]="elementType"
+                [value] = "value"
+                cssClass = "aclass"
+                [errorCorrectionLevel] = "errorCorrectionLevel">
+            </ngx-qrcode>
+            <br>
+            <table class="table table-striped">
+                <thead class="font-format">
+                    <tr>
+                        <th>Vacuna</th>
+                        <th>Fecha de Vacunación</th>
+                        <th>Unidad</th>
+                        <th>Dósis</th>            
+                    </tr>
+                </thead>
+                <tbody class="font-format-ligth">
+                    <tr *ngFor="let item of carnetVacunacionInfoLst">
+                        <td>{{item.Marca}}</td>
+                        <td>{{item.FechaVacunacion | slice: 0:10}}</td>
+                        <td>{{item.UnidadDeVacunacion}}</td>
+                        <td>{{item.DosisAplicada}}</td>                        
+                    </tr>
+                </tbody>
+            </table>                                               
+        </div>
+    </div>
+    <br>
+    <!-- <div class="row"> 
+        <div class="col-sm-1">    </div>
+        <div class="col"> <button type="button" id="PDF" name="PDF" class="btn btn-success" (click)="descargaPDF()">Descargar PDF.</button> </div>
+        <div class="col-sm-1"></div>
+        <div class="col"> <button type="button" id="Correo" name="Correo" class="btn btn-success" (click)="enviarCorreo()" >Enviar por correo.</button> </div>
+    </div>     -->
+    <br>   
+</div>

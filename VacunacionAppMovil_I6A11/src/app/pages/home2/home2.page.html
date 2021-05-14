@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button color="light">
+        <ion-icon slot="start" name=""></ion-icon>
+        Favoritos
+      </ion-button>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  
+  <ion-button (click)="startScan()" expand="full">
+    <ion-icon slot="start" name="play"></ion-icon>
+    Start scan
+  </ion-button>
+  
+  <ion-button expand="full" (click)="reset()" color="warning" *ngIf="scanResult">
+    <ion-icon slot="start" name="refresh"></ion-icon>
+    Reset
+  </ion-button>
+  
+
+  <video #video [hidden]="!scanActive" width="100%"></video>
+  <canvas #canvas hidden></canvas>
+  
+  <ion-button expand="full" color="danger" (click)="stopScan()" *ngIf="scanActive">
+    <ion-icon slot="start" name="close"></ion-icon>
+    Stop Scan
+  </ion-button>
+  
+
+  <ion-card *ngIf="scanResult">
+    <ion-card-header>      
+      <ion-card-title>QR Code</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{scanResult}}
+    </ion-card-content>
+  </ion-card>
+  
+
+</ion-content>

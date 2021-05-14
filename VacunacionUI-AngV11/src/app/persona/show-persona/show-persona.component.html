@@ -1,0 +1,41 @@
+
+
+<div class="container">      
+    <div class="row">
+        <!-- 6. Se agregó todo el html de la tabla -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>PersonaId</th>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>            
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of PersonaList">
+                    <td>{{item.PersonaId}}</td>
+                    <td>{{item.Nombre}}</td>
+                    <td>{{item.ApellidoPaterno}}</td>
+                    <td>{{item.ApellidoMaterno}}</td>
+                    <td>
+                        <button type="button" class="btn btn-light mr-1" > Editar </button>
+                        <button type="button" class="btn btn-light mr-1" > Eliminar </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 7.
+        Ir al TS de show-persona.component.ts y compiar el selector
+        app-show-persona
+        y pegarlo en el componente padre 
+        persona.component.html
+        -->
+    </div>
+</div>
+
+
+
+
+
