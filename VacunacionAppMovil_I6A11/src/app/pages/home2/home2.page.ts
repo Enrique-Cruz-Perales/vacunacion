@@ -3,7 +3,6 @@ import { LoadingController, ToastController } from '@ionic/angular';
 import jsQR from 'jsqr';
 
 
-
 import { AnonymousSubject } from 'rxjs/internal/Subject';
 import { stringify } from '@angular/compiler/src/util';
 
